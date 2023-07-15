@@ -22,7 +22,7 @@ body {
   background: #ffffff;
   font-size: 16px;
   font-weight: 300;
-  font-family: 'Vidaloka', serif;
+  font-family: 'Rubik', serif;
   line-height: 1.8;
   color: #7e8890;
 }
@@ -42,9 +42,16 @@ body {
   color: #ffffff;
 }
 
-h1, h2, .heading-with-icon, h3, h4, .probootstrap-product-tour h5 {
+h1 {
   color: #374252;
-  font-family: 'Vidaloka', serif;
+  font-family: 'Abril Fatface', serif;
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+h2, .heading-with-icon, h3, h4, .probootstrap-product-tour h5 {
+  color: #374252;
+  font-family: 'Rubik', serif;
   margin: 1.414em 0 0.5em;
   font-weight: inherit;
   line-height: 1.2;
