@@ -1896,6 +1896,7 @@ a:hover, a:focus, a:active {
   padding-left: 0px;
 }
 
+
 @media screen and (max-width: 480px) {
   .probootstrap-gutter0 > div[class*='col-'] {
     padding-right: 0px;
