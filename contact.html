@@ -72,7 +72,7 @@
 
       <div class="row mb60">
         <div class="col-md-8 col-md-offset-2 probootstrap-animate">
-      <form name="contact" method="POST" data-netlify="true">
+      <form name="contact" method="POST" data-netlify="true" action="/success.html">
             <div class="form-group">
               <label for="name">Full Name</label>
               <input type="text" class="form-control" id="name" name="name">
@@ -89,7 +89,7 @@
               <label for="message">Message</label>
               <textarea cols="30" rows="10" class="form-control" id="message" name="message"></textarea>
             </div>
-             <div data-netlify-recaptcha="true"></div>
+             <div id="captcha" data-netlify-recaptcha="true"></div>
             <div class="form-group">
               <input type="submit" class="btn btn-primary" id="submit" name="submit" value="Send Message">
             </div>

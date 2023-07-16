@@ -21,11 +21,11 @@ body {
 }
 // selection
 ::selection {
-  background: $brand-black; 
+  background: $brand-black;
   color: $brand-white;
 }
 ::-moz-selection {
-  background: $brand-black; 
+  background: $brand-black;
   color: $brand-white;
 }
 // Typography
@@ -139,7 +139,9 @@ a {
 		transform: translateX(0px);
 	}
 }
-
+.captcha {
+	margin-bottom: 10px;
+}
 // main simple nav
 .probootstrap-main-nav {
 	float: right;
@@ -232,10 +234,10 @@ a {
 }
 
 
-// intro 
+// intro
 .probootstrap-intro {
 	background-size: cover;
-	background-repeat: no-repeat; 
+	background-repeat: no-repeat;
 	position: relative;
 	top: 0;
 	height: 800px;
@@ -442,7 +444,7 @@ a {
 			border: 1px solid $brand-black;
 		}
 		&:active {
-			
+
 		}
 		&:focus {
 
@@ -507,7 +509,7 @@ a {
 		border-top: 1px solid rgba(0,0,0,.1);
 	}
 	&.probootstrap-border-bottom {
-		border-bottom: 1px solid rgba(0,0,0,.1);	
+		border-bottom: 1px solid rgba(0,0,0,.1);
 	}
 	> .container {
 		&.probootstrap-border-top {
@@ -651,7 +653,7 @@ a {
 	padding: 7em 0 2em 0;
 	background: $brand-white;
 	position: relative;
-	
+
 	@media screen and (max-width: $screen-sm) {
 		padding: 3em 0;
 	}
@@ -892,7 +894,7 @@ a {
 			top: 2px;
 			left: 0px;
 			opacity: 1;
-			visibility: visible;	
+			visibility: visible;
 		}
 	}
 }
@@ -938,7 +940,7 @@ a {
 			text-transform: uppercase;
 		}
 	}
-	
+
 	.probootstrap-price-wrap {
 		margin-bottom: 50px;
 		.probootstrap-price {
@@ -969,7 +971,7 @@ a {
 }
 
 
-// heading with icon 
+// heading with icon
 .heading-with-icon {
 	@extend h2;
 	margin-bottom: 1.5em;
@@ -978,8 +980,8 @@ a {
 		vertical-align: top;
 	}
 	i {
-		color: $brand-primary; 
-		font-size: 30px; 
+		color: $brand-primary;
+		font-size: 30px;
 		position: relative;
 		margin-right: 20px;
 		margin-bottom: 10px;
@@ -993,7 +995,7 @@ a {
 .probootstrap-box {
 	// box-shadow: 0px 1px 15px 0px rgba(0,0,0,.1);
 	background: $brand-white;
-	padding: 2em;	
+	padding: 2em;
 	margin-bottom: 1.5em;
 	-webkit-box-shadow: 18px 17px 104px -24px rgba(0,0,0,0.1);
 	-moz-box-shadow: 18px 17px 104px -24px rgba(0,0,0,0.1);
@@ -1002,7 +1004,7 @@ a {
 		i {
 			font-size: 50px;
 			color: $brand-primary;
-			
+
 		}
 	}
 	ul {
@@ -1018,7 +1020,7 @@ a {
 }
 // absolute container
 .probootstrap-absolute {
-	position: absolute; 
+	position: absolute;
 	width: 100%;
 	@media screen and (max-width: $screen-md) {
 		position: relative;
@@ -1102,9 +1104,9 @@ a {
 		}
 		&:first-child {
 			> a {
-				padding-left: 0;	
+				padding-left: 0;
 			}
-			
+
 		}
 	}
 }
@@ -1261,7 +1263,7 @@ a {
 	}
 	label {
 		font-weight: normal;
-	}	
+	}
 	.form-control {
 		height: 46px;
 		box-shadow: none;
@@ -1277,7 +1279,7 @@ a {
 	}
 	textarea.form-control {
 		height: inherit;
-		resize:vertical; 
+		resize:vertical;
 	}
 }
 
@@ -1342,7 +1344,7 @@ a {
   border: none;
   margin: 0 0 0;
   @extend .slider-height;
-  
+
   .slides {
   	> li {
   		@extend .slider-height;
@@ -1472,7 +1474,7 @@ a {
 			border-radius: 4px;
 			overflow: hidden;
 		}
-		
+
 	}
 }
 .owl-carousel .owl-controls,
@@ -1497,12 +1499,12 @@ a {
 .owl-carousel .owl-controls .owl-nav .owl-next,
 .owl-carousel-posts .owl-controls .owl-nav .owl-next {
 	right: 20px;
-	
+
 }
 .owl-carousel .owl-controls .owl-nav .owl-prev,
 .owl-carousel-posts .owl-controls .owl-nav .owl-prev {
 	left: 20px;
-	
+
 }
 
 .owl-carousel-posts .owl-controls .owl-nav .owl-next,
@@ -1514,7 +1516,7 @@ a {
 	}
 	&:hover {
 		i {
-			color: $brand-black;		
+			color: $brand-black;
 		}
 	}
 }
@@ -1554,16 +1556,16 @@ a {
 }
 .owl-theme .owl-dots {
 	position: absolute;
-	bottom: -30px;	
+	bottom: -30px;
 	width: 100%;
 	text-align: center;
 }
 .owl-carousel-fullwidth.owl-theme .owl-dots {
-	bottom: -30px;	
+	bottom: -30px;
 	margin-bottom: -2.5em;
 }
 .owl-work.owl-theme .owl-dots {
-	bottom: -30px;	
+	bottom: -30px;
 	margin-bottom: -2.5em;
 }
 .owl-theme .owl-dots .owl-dot span {
@@ -1590,7 +1592,7 @@ a {
 		p {
 			color: rgba($brand-white, .9)!important;
 		}
-	}	
+	}
 	.owl-theme .owl-dots .owl-dot span {
 		background: rgba($brand-white, .2);
 		&:hover {
@@ -1607,8 +1609,8 @@ a {
 // magnific popup
 .mfp-fade.mfp-bg {
   opacity: 0;
-  -webkit-transition: all 0.15s ease-out; 
-  -moz-transition: all 0.15s ease-out; 
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
   transition: all 0.15s ease-out;
 }
 .mfp-fade.mfp-bg.mfp-ready {
@@ -1620,8 +1622,8 @@ a {
 
 .mfp-fade.mfp-wrap .mfp-content {
   opacity: 0;
-  -webkit-transition: all 0.15s ease-out; 
-  -moz-transition: all 0.15s ease-out; 
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
   transition: all 0.15s ease-out;
 }
 .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
@@ -1643,9 +1645,9 @@ a {
 .mfp-with-zoom.mfp-bg {
 	opacity: 0;
 	-webkit-backface-visibility: hidden;
-	-webkit-transition: all 0.3s ease-out; 
-	-moz-transition: all 0.3s ease-out; 
-	-o-transition: all 0.3s ease-out; 
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
 	transition: all 0.3s ease-out;
 }
 
@@ -1656,7 +1658,7 @@ a {
 		opacity: 0.8;
 }
 
-.mfp-with-zoom.mfp-removing .mfp-container, 
+.mfp-with-zoom.mfp-removing .mfp-container,
 .mfp-with-zoom.mfp-removing.mfp-bg {
 	opacity: 0;
 }
