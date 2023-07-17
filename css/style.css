@@ -112,7 +112,7 @@ a:hover, a:focus, a:active {
   font-size: 20px;
   display: block;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .probootstrap-logo:hover, .probootstrap-logo:focus, .probootstrap-logo:active {
@@ -295,7 +295,7 @@ a:hover, a:focus, a:active {
   background-repeat: no-repeat;
   position: relative;
   top: 0;
-  height: 500px;
+  height: 650px;
   overflow: hidden;
 }
 
