@@ -1,4 +1,4 @@
-/* 2026 palette: Terracotta #C4532A + Teal #0D9488 */
+/* 2026 palette: Terracotta #C4532A + Plum #4A1942 */
 
 /* Hero banner — solid terracotta overlay */
 .probootstrap-intro:before {
@@ -63,6 +63,143 @@
 .portfolio-archive-divider span:before { right: 100%; }
 .portfolio-archive-divider span:after  { left: 100%; }
 
+/* --- Experience section --- */
+.experience-item {
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #eee;
+  border-left: 3px solid #C4532A;
+  padding-left: 24px;
+}
+
+.experience-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.experience-company {
+  font-size: 18px;
+  color: #C4532A;
+  margin-bottom: 4px;
+}
+
+.experience-role {
+  font-weight: 500;
+  color: #374252;
+  margin-bottom: 2px;
+}
+
+.experience-meta {
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 0;
+}
+
+.experience-bullets {
+  padding-left: 18px;
+}
+
+.experience-bullets li {
+  margin-bottom: 10px;
+  color: #7e8890;
+  line-height: 1.7;
+}
+
+/* --- Stats section --- */
+.stats-section {
+  background: #C4532A;
+  padding: 80px 0;
+}
+
+.stats-section h2 {
+  color: #fff;
+}
+
+.stat-item {
+  padding: 20px;
+}
+
+.stat-number-wrap {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.stat-number {
+  font-size: 72px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+
+.stat-suffix,
+.stat-prefix {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.stat-label {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,0.7);
+  margin: 0;
+}
+
+/* --- Tools section --- */
+.tools-section {
+  background: #f9f7f5;
+}
+
+.tools-category {
+  margin-bottom: 32px;
+}
+
+.tools-category h4 {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #aaa;
+  margin-bottom: 14px;
+}
+
+.tools-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tool-tag {
+  display: inline-block;
+  background: #fff;
+  color: #374252;
+  border: 1.5px solid #e0dbd6;
+  border-radius: 30px;
+  padding: 8px 18px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  cursor: default;
+}
+
+.tool-tag:hover {
+  background: #C4532A;
+  color: #fff;
+  border-color: #C4532A;
+}
+
+/* Nav LinkedIn link */
+.nav-linkedin {
+  opacity: 0.75;
+  transition: opacity 0.2s;
+}
+.nav-linkedin:hover {
+  opacity: 1;
+  color: #C4532A !important;
+}
+
 /* --- Links --- */
 a {
   color: #C4532A;
@@ -71,7 +208,7 @@ a {
 /* --- Colored & dark section backgrounds: teal --- */
 .probootstrap-section.probootstrap-section-colored,
 .probootstrap-section.probootstrap-section-dark {
-  background: #0D9488;
+  background: #4A1942;
   filter: none;
 }
 
@@ -138,5 +275,5 @@ a {
 }
 
 .probootstrap-secondary-color {
-  color: #0D9488 !important;
+  color: #4A1942 !important;
 }
