@@ -216,20 +216,24 @@ a {
   filter: none;
 }
 
-/* All text inside plum sections — white for contrast */
+/* All text inside plum sections — !important needed to beat style.css specificity */
 .probootstrap-section.probootstrap-section-colored h2,
 .probootstrap-section.probootstrap-section-dark h2,
+.probootstrap-section.probootstrap-section-colored .section-heading h2,
+.probootstrap-section.probootstrap-section-dark .section-heading h2,
 .probootstrap-section.probootstrap-section-colored h3,
 .probootstrap-section.probootstrap-section-dark h3,
 .probootstrap-section.probootstrap-section-colored p,
 .probootstrap-section.probootstrap-section-dark p,
+.probootstrap-section.probootstrap-section-colored .section-heading p,
+.probootstrap-section.probootstrap-section-dark .section-heading p,
 .probootstrap-section.probootstrap-section-colored .lead,
 .probootstrap-section.probootstrap-section-dark .lead,
 .probootstrap-section.probootstrap-section-colored .heading-with-icon,
 .probootstrap-section.probootstrap-section-dark .heading-with-icon,
 .probootstrap-section.probootstrap-section-colored .heading-with-icon i,
 .probootstrap-section.probootstrap-section-dark .heading-with-icon i {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.9) !important;
 }
 
 /* --- Buttons --- */
