@@ -216,6 +216,14 @@ a {
   filter: none;
 }
 
+/* Skill card headings — min-height so long titles don't misalign the paragraph below */
+.probootstrap-section-dark h3.heading-with-icon {
+  min-height: 64px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
 /* All text inside plum sections — !important needed to beat style.css specificity */
 .probootstrap-section.probootstrap-section-colored h2,
 .probootstrap-section.probootstrap-section-dark h2,
