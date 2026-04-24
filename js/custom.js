@@ -16,7 +16,7 @@
     {
       accent:   '#C47A1E',
       name:     'amber',
-      headline: 'I close the gap between what products do and what people understand.',
+      headline: 'I bridge the gap between products and the people using them.',
       subtitle: 'Technical communicator and documentation builder — the person who makes sure nothing gets lost in translation.'
     },
     {
@@ -39,12 +39,22 @@
   document.documentElement.style.setProperty('--accent', pick.accent);
   document.documentElement.setAttribute('data-palette', pick.name);
 
-  // Swap hero copy once DOM is ready — only on pages that have the markers
   document.addEventListener('DOMContentLoaded', function() {
+    // Swap hero copy — only on pages that have the markers
     var h1 = document.querySelector('[data-rotating-headline]');
     var h2 = document.querySelector('[data-rotating-subtitle]');
     if (h1) h1.textContent = pick.headline;
     if (h2) h2.textContent = pick.subtitle;
+
+    // Inject morphing blobs into every hero section
+    var heros = document.querySelectorAll('.probootstrap-intro');
+    heros.forEach(function(hero) {
+      for (var i = 1; i <= 3; i++) {
+        var blob = document.createElement('div');
+        blob.className = 'hero-blob hero-blob-' + i;
+        hero.insertBefore(blob, hero.firstChild);
+      }
+    });
   });
 })();
 

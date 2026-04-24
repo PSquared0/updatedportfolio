@@ -8,34 +8,83 @@
 .probootstrap-intro:before {
   background: var(--accent);
   filter: none;
-  opacity: .82;
+  opacity: .75;
 }
 
-/* Animated wave at bottom of hero */
+/* Hero blobs — white highlights that morph slowly over the overlay */
+.hero-blob {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.12);
+  pointer-events: none;
+  z-index: 1;
+  will-change: border-radius;
+}
+
+.hero-blob-1 {
+  width: 600px;
+  height: 600px;
+  top: -160px;
+  right: -120px;
+  animation: blobMorph1 22s ease-in-out infinite;
+}
+
+.hero-blob-2 {
+  width: 420px;
+  height: 420px;
+  bottom: 40px;
+  left: -100px;
+  background: rgba(255, 255, 255, 0.08);
+  animation: blobMorph2 17s ease-in-out infinite;
+}
+
+.hero-blob-3 {
+  width: 280px;
+  height: 280px;
+  top: 25%;
+  right: 38%;
+  background: rgba(255, 255, 255, 0.07);
+  animation: blobMorph3 26s ease-in-out infinite;
+}
+
+@keyframes blobMorph1 {
+  0%   { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  25%  { border-radius: 40% 60% 55% 45% / 50% 40% 60% 50%; }
+  50%  { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+  75%  { border-radius: 55% 45% 40% 60% / 40% 55% 45% 55%; }
+  100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+}
+
+@keyframes blobMorph2 {
+  0%   { border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%; }
+  33%  { border-radius: 60% 40% 40% 60% / 40% 60% 40% 60%; }
+  66%  { border-radius: 50% 50% 30% 70% / 60% 40% 60% 40%; }
+  100% { border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%; }
+}
+
+@keyframes blobMorph3 {
+  0%   { border-radius: 70% 30% 50% 50% / 30% 70% 50% 50%; }
+  50%  { border-radius: 30% 70% 50% 50% / 70% 30% 50% 50%; }
+  100% { border-radius: 70% 30% 50% 50% / 30% 70% 50% 50%; }
+}
+
+/* Gentle arc at bottom of hero */
 .probootstrap-intro:after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 60px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60'%3E%3Cpath fill='%23ffffff' d='M0,30 C90,5 270,55 360,30 C450,5 630,55 720,30 C810,5 990,55 1080,30 C1170,5 1350,55 1440,30 L1440,60 L0,60 Z'/%3E%3C/svg%3E");
-  background-repeat: repeat-x;
-  background-size: 1440px 60px;
-  background-position: bottom;
-  animation: waveSlide 12s linear infinite;
+  height: 80px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80' preserveAspectRatio='none'%3E%3Cpath fill='%23ffffff' d='M0,0 Q720,60 1440,0 L1440,80 L0,80 Z'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   z-index: 2;
 }
 
-/* Scroll down button — raised above the wave */
+/* Scroll down button — raised above the arc */
 .probootstrap-intro .probootstrap-scroll-down {
   z-index: 5;
-  bottom: 75px;
-}
-
-@keyframes waveSlide {
-  from { background-position-x: 0; }
-  to   { background-position-x: 1440px; }
+  bottom: 90px;
 }
 
 /* Portfolio archive divider */
