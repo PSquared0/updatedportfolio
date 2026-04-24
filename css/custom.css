@@ -1,1 +1,113 @@
-/* Your custom css code goes here */
+/* 2026 palette: Terracotta #C4532A + Teal #0D9488 */
+
+/* Hero banner — solid terracotta overlay */
+.probootstrap-intro:before {
+  background: #C4532A;
+  filter: none;
+  opacity: .82;
+}
+
+/* Animated wave at bottom of hero */
+.probootstrap-intro:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60'%3E%3Cpath fill='%23ffffff' d='M0,30 C90,5 270,55 360,30 C450,5 630,55 720,30 C810,5 990,55 1080,30 C1170,5 1350,55 1440,30 L1440,60 L0,60 Z'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-size: 1440px 60px;
+  background-position: bottom;
+  animation: waveSlide 12s linear infinite;
+  z-index: 2;
+}
+
+/* Scroll down button — raised above the wave */
+.probootstrap-intro .probootstrap-scroll-down {
+  z-index: 5;
+  bottom: 75px;
+}
+
+@keyframes waveSlide {
+  from { background-position-x: 0; }
+  to   { background-position-x: 1440px; }
+}
+
+/* --- Links --- */
+a {
+  color: #C4532A;
+}
+
+/* --- Colored & dark section backgrounds: teal --- */
+.probootstrap-section.probootstrap-section-colored,
+.probootstrap-section.probootstrap-section-dark {
+  background: #0D9488;
+  filter: none;
+}
+
+/* Icons inside teal sections — white for contrast */
+.probootstrap-section.probootstrap-section-colored .heading-with-icon,
+.probootstrap-section.probootstrap-section-dark .heading-with-icon,
+.probootstrap-section.probootstrap-section-colored .heading-with-icon i,
+.probootstrap-section.probootstrap-section-dark .heading-with-icon i {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* --- Buttons --- */
+.btn.btn-primary {
+  background: #C4532A;
+  border-color: #C4532A;
+}
+
+.btn.btn-ghost {
+  border-color: #C4532A;
+  color: #C4532A;
+}
+
+.btn.btn-ghost:hover {
+  background: #C4532A;
+  color: #ffffff;
+}
+
+.btn.btn-ghost:focus,
+.btn.btn-ghost:active {
+  color: #C4532A;
+  border-color: #C4532A;
+}
+
+/* Ghost-white hover: white bg, terracotta text */
+.btn.btn-ghost.btn-ghost-white:hover,
+.btn.btn-ghost.btn-ghost-white:focus,
+.btn.btn-ghost.btn-ghost-white:active {
+  color: #C4532A;
+}
+
+/* --- Misc accent uses --- */
+.probootstrap-product-tour h5 {
+  color: #C4532A;
+}
+
+.probootstrap-block-image .text h3 a:hover {
+  color: #C4532A;
+}
+
+.progress-bar {
+  background-color: #C4532A;
+}
+
+.progress-bar > span {
+  background: #C4532A;
+}
+
+.progress-bar > span:before {
+  border-top-color: #C4532A;
+}
+
+.probootstrap-primary-color {
+  color: #C4532A !important;
+}
+
+.probootstrap-secondary-color {
+  color: #0D9488 !important;
+}
