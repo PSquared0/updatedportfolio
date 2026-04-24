@@ -34,6 +34,35 @@
   to   { background-position-x: 1440px; }
 }
 
+/* Portfolio archive divider */
+.portfolio-archive-divider {
+  padding: 50px 15px 30px;
+  text-align: center;
+}
+
+.portfolio-archive-divider span {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #aaa;
+  position: relative;
+  padding: 0 20px;
+}
+
+.portfolio-archive-divider span:before,
+.portfolio-archive-divider span:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  height: 1px;
+  background: #ddd;
+}
+
+.portfolio-archive-divider span:before { right: 100%; }
+.portfolio-archive-divider span:after  { left: 100%; }
+
 /* --- Links --- */
 a {
   color: #C4532A;
