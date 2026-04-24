@@ -1,8 +1,12 @@
-/* 2026 palette: Terracotta #C4532A + Plum #4A1942 */
+/* 2026 palette: Terracotta #C4532A + Plum #4A1942
+   Accent rotates on load via JS — fallback is terracotta */
+:root {
+  --accent: #C4532A;
+}
 
-/* Hero banner — solid terracotta overlay */
+/* Hero banner — solid accent overlay */
 .probootstrap-intro:before {
-  background: #C4532A;
+  background: var(--accent);
   filter: none;
   opacity: .82;
 }
@@ -68,7 +72,7 @@
   padding-bottom: 40px;
   margin-bottom: 40px;
   border-bottom: 1px solid #eee;
-  border-left: 3px solid #C4532A;
+  border-left: 3px solid var(--accent);
   padding-left: 24px;
 }
 
@@ -79,7 +83,7 @@
 
 .experience-company {
   font-size: 18px;
-  color: #C4532A;
+  color: var(--accent);
   margin-bottom: 4px;
 }
 
@@ -107,7 +111,7 @@
 
 /* --- Stats section --- */
 .stats-section {
-  background: #C4532A;
+  background: var(--accent);
   padding: 80px 0;
 }
 
@@ -185,9 +189,9 @@
 }
 
 .tool-tag:hover {
-  background: #C4532A;
+  background: var(--accent);
   color: #fff;
-  border-color: #C4532A;
+  border-color: var(--accent);
 }
 
 /* Nav LinkedIn link */
@@ -197,81 +201,89 @@
 }
 .nav-linkedin:hover {
   opacity: 1;
-  color: #C4532A !important;
+  color: var(--accent) !important;
 }
 
 /* --- Links --- */
 a {
-  color: #C4532A;
+  color: var(--accent);
 }
 
-/* --- Colored & dark section backgrounds: teal --- */
+/* --- Colored & dark section backgrounds: plum --- */
 .probootstrap-section.probootstrap-section-colored,
 .probootstrap-section.probootstrap-section-dark {
   background: #4A1942;
   filter: none;
 }
 
-/* Icons inside teal sections — white for contrast */
+/* All text inside plum sections — white for contrast */
+.probootstrap-section.probootstrap-section-colored h2,
+.probootstrap-section.probootstrap-section-dark h2,
+.probootstrap-section.probootstrap-section-colored h3,
+.probootstrap-section.probootstrap-section-dark h3,
+.probootstrap-section.probootstrap-section-colored p,
+.probootstrap-section.probootstrap-section-dark p,
+.probootstrap-section.probootstrap-section-colored .lead,
+.probootstrap-section.probootstrap-section-dark .lead,
 .probootstrap-section.probootstrap-section-colored .heading-with-icon,
 .probootstrap-section.probootstrap-section-dark .heading-with-icon,
 .probootstrap-section.probootstrap-section-colored .heading-with-icon i,
 .probootstrap-section.probootstrap-section-dark .heading-with-icon i {
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* --- Buttons --- */
 .btn.btn-primary {
-  background: #C4532A;
-  border-color: #C4532A;
+  background: var(--accent);
+  border-color: var(--accent);
 }
 
 .btn.btn-ghost {
-  border-color: #C4532A;
-  color: #C4532A;
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 .btn.btn-ghost:hover {
-  background: #C4532A;
+  background: var(--accent);
   color: #ffffff;
 }
 
 .btn.btn-ghost:focus,
 .btn.btn-ghost:active {
-  color: #C4532A;
-  border-color: #C4532A;
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
-/* Ghost-white hover: white bg, terracotta text */
+/* Ghost-white hover: white bg, accent text */
 .btn.btn-ghost.btn-ghost-white:hover,
 .btn.btn-ghost.btn-ghost-white:focus,
 .btn.btn-ghost.btn-ghost-white:active {
-  color: #C4532A;
+  color: var(--accent);
 }
 
 /* --- Misc accent uses --- */
 .probootstrap-product-tour h5 {
-  color: #C4532A;
+  color: var(--accent);
 }
 
 .probootstrap-block-image .text h3 a:hover {
-  color: #C4532A;
+  color: var(--accent);
 }
 
 .progress-bar {
-  background-color: #C4532A;
+  background-color: var(--accent);
 }
 
 .progress-bar > span {
-  background: #C4532A;
+  background: var(--accent);
 }
 
 .progress-bar > span:before {
-  border-top-color: #C4532A;
+  border-top-color: var(--accent);
 }
 
 .probootstrap-primary-color {
-  color: #C4532A !important;
+  color: var(--accent) !important;
 }
 
 .probootstrap-secondary-color {

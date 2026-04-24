@@ -1,3 +1,18 @@
+// Rotate accent color on each page load from a curated warm palette
+(function() {
+  var palettes = [
+    { accent: '#C4532A', name: 'terracotta' },
+    { accent: '#D95F3B', name: 'coral'      },
+    { accent: '#C47A1E', name: 'amber'      },
+    { accent: '#B5485A', name: 'rose'       },
+    { accent: '#6B7A2A', name: 'olive'      }
+  ];
+  var pick = palettes[Math.floor(Math.random() * palettes.length)];
+  var root = document.documentElement;
+  root.style.setProperty('--accent', pick.accent);
+  root.setAttribute('data-palette', pick.name);
+})();
+
 jQuery(document).ready(function() {
   "use strict";
 
