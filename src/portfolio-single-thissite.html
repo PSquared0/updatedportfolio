@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('partials/_head.html', {
+  "title": "This Site — Case Study",
+  "description": "How Pascale Pierre redesigned and rebuilt her own portfolio from scratch to reposition from graphic design toward product, ops, and technical communication roles."
+})
+<body>
+
+@@include('partials/_nav.html', {"page": "portfolio"})
+
+<section class="probootstrap-intro" style="background-image: url(img/hero_bg_2.jpg);" data-stellar-background-ratio="0.5">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-7 probootstrap-intro-text">
+        <h1 class="probootstrap-animate">This Site</h1>
+        <div class="probootstrap-subtitle probootstrap-animate">
+          <h2>Repositioning a design portfolio for product, ops, and technical communication roles — built from scratch.</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="probootstrap-scroll-down js-next" href="#next-section">Scroll down <i class="icon-chevron-down"></i></a>
+</section>
+
+<section id="next-section" class="probootstrap-section">
+  <div class="container">
+    <div class="col-md-3 col-md-push-9">
+
+      <h2>Project Overview</h2>
+
+      <h4>The Problem</h4>
+      <p>A portfolio built years ago for graphic design clients no longer reflected where I was headed. Every project was framed around deliverables — "here's the logo," "here's the campaign" — with no context for why it existed or what it solved. It also required editing the same nav, footer, and header across a dozen separate HTML files every time anything changed. The site was hard to maintain and harder to reposition.</p>
+
+      <h4>What I Did</h4>
+      <ul>
+        <li>Rebuilt the entire site using a Gulp 4 partials system — nav, footer, and CTA are maintained in one file each, not duplicated across every page</li>
+        <li>Rewrote all case study copy using a problem → process → outcome framework to speak to product and ops hiring managers, not just creative directors</li>
+        <li>Designed and implemented a rotating accent palette (5 warm tones) using CSS custom properties, with all combinations WCAG AA verified for contrast</li>
+        <li>Added a paired rotating headline system — each palette loads a different hero copy angle reflecting a different hiring use case</li>
+        <li>Built animated components from scratch: morphing SVG blob hero, scroll-triggered stat counters using IntersectionObserver, smooth eased number animation via requestAnimationFrame</li>
+        <li>Wrote the About page experience section, career stats, and tools stack to make the ops and project management background legible to technical hiring managers</li>
+      </ul>
+
+      <h4>Outcome</h4>
+      <p>A portfolio that reflects both design craft and technical depth — and changes its story slightly with every visit, because flexibility is the whole point. Every design decision has a reason. Every line of code is mine.</p>
+
+      <p class="mb20">
+        <strong class="probootstrap-black-color">Role:</strong><br>
+        Design · Development · Strategy · Copywriting
+      </p>
+
+      <p class="mb50">
+        <strong class="probootstrap-black-color">Stack:</strong><br>
+        HTML · CSS · JavaScript · Gulp
+      </p>
+
+      <p>
+        <a href="index.html" role="button" class="btn btn-primary">View the Site</a>
+      </p>
+
+    </div>
+    <div class="col-md-9 col-md-pull-3">
+      <p><img src="img/hero_bg_1.jpg" alt="Portfolio site screenshot" class="img-responsive"></p>
+    </div>
+  </div>
+</section>
+
+@@include('partials/_cta.html')
+@@include('partials/_footer.html')
+
+</body>
+</html>
