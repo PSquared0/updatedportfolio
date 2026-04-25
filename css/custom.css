@@ -4,6 +4,13 @@
   --accent: #C4532A;
 }
 
+/* Hero height and overflow override */
+.probootstrap-intro {
+  min-height: 100vh;
+  height: auto !important;
+  overflow: visible !important;
+}
+
 /* Hero banner — solid accent overlay */
 .probootstrap-intro:before {
   background: var(--accent);
