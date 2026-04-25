@@ -111,7 +111,7 @@
 .gl-sidebar {
   width: 260px;
   min-width: 260px;
-  background: #4A1942;
+  background: #0A0E2A;
   position: sticky;
   top: 0;
   height: 100vh;
@@ -132,7 +132,7 @@
 .gl-sidebar-logo span {
   font-size: 14px;
   font-weight: 700;
-  color: #fff;
+  color: #F5C842;
   letter-spacing: 1px;
 }
 
@@ -147,7 +147,7 @@
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: rgba(255,255,255,0.35);
+  color: rgba(245,200,66,0.5);
   padding: 20px 24px 6px;
   margin: 0;
 }
@@ -164,15 +164,15 @@
 }
 
 .gl-nav-link:hover {
-  color: #fff !important;
-  background: rgba(255,255,255,0.07);
+  color: #F5C842 !important;
+  background: rgba(245,200,66,0.08);
   text-decoration: none !important;
 }
 
 .gl-nav-link.active {
-  color: #fff !important;
-  border-left-color: var(--accent);
-  background: rgba(255,255,255,0.1);
+  color: #F5C842 !important;
+  border-left-color: #F5C842;
+  background: rgba(245,200,66,0.15);
 }
 
 /* Content area */
@@ -180,14 +180,15 @@
   flex: 1;
   padding: 48px 60px 80px;
   min-width: 0;
+  background: #FAFAF5;
 }
 
 .doc-page { display: none; }
 .doc-page.active { display: block; }
 
 /* Doc typography */
-.gl-content h1 { font-size: 30px; color: #374252; margin-bottom: 6px; margin-top: 0; }
-.gl-content h2 { font-size: 20px; color: #374252; margin-top: 36px; margin-bottom: 12px; border-bottom: 1px solid #eee; padding-bottom: 8px; }
+.gl-content h1 { font-size: 30px; color: #0A0E2A; margin-bottom: 6px; margin-top: 0; }
+.gl-content h2 { font-size: 20px; color: #0A0E2A; margin-top: 36px; margin-bottom: 12px; border-bottom: 1px solid #eee; padding-bottom: 8px; }
 .gl-content h3 { font-size: 16px; color: #374252; margin-top: 28px; margin-bottom: 8px; }
 .gl-content h4 { font-size: 12px; text-transform: uppercase; letter-spacing: 2.5px; color: #aaa; margin-top: 24px; margin-bottom: 6px; }
 .gl-content p { color: #7e8890; line-height: 1.85; margin-bottom: 16px; }
@@ -239,11 +240,12 @@
 
 /* Callout */
 .doc-callout {
-  background: #f9f7f5;
-  border-left: 4px solid var(--accent);
+  background: #0A0E2A;
+  border-left: 4px solid #F5C842;
   border-radius: 4px;
   padding: 18px 22px;
   margin: 28px 0;
+  color: #e8e8e8;
 }
 
 .doc-callout p { margin-bottom: 8px; }
@@ -365,6 +367,14 @@
   .doc-cards { grid-template-columns: 1fr; }
   .arc-card-grid { grid-template-columns: 1fr; }
 }
+
+/* Hero overrides */
+.probootstrap-intro { background-color: #0A0E2A !important; }
+.probootstrap-intro-text h1 { color: #F5C842 !important; }
+.probootstrap-intro-text h2 { color: rgba(255,255,255,0.8) !important; }
+
+/* Button override */
+#next-section .btn-primary { background-color: #CC1A22 !important; border-color: #CC1A22 !important; }
 </style>
 
 <div class="gl-viewer">
@@ -392,7 +402,7 @@
     <a class="gl-nav-link" data-page="page-punk-hazard">Punk Hazard</a>
     <a class="gl-nav-link" data-page="page-dressrosa">Dressrosa Saga</a>
     <a class="gl-nav-link" data-page="page-whole-cake">Whole Cake Island</a>
-    <a class="gl-nav-link" data-page="page-wano">Wano Country Saga ⭐</a>
+    <a class="gl-nav-link" data-page="page-wano">Wano Country Saga</a>
     <a class="gl-nav-link" data-page="page-egghead">Egghead Saga</a>
     <a class="gl-nav-link" data-page="page-elbaf">Elbaf Saga</a>
 
