@@ -85,7 +85,7 @@ p, ul, ol {
 a {
   -webkit-transition: .3s all;
   transition: .3s all;
-  color: #C4532A;
+  color: #C4704B;
 }
 
 a:hover, a:focus, a:active {
@@ -244,7 +244,7 @@ a:hover, a:focus, a:active {
 
 .probootstrap-main-nav li.probootstrap-cta a:hover {
   background: #ffffff;
-  color: #C4532A;
+  color: #C4704B;
 }
 
 .probootstrap-mobile-menu-active .probootstrap-main-nav li.probootstrap-cta {
@@ -350,10 +350,10 @@ a:hover, a:focus, a:active {
   right: 0;
   bottom: 0;
   content: "";
-  background: #A63B1E;
-  background: -webkit-gradient(left top, right top, color-stop(0%, #A63B1E), color-stop(100%, #C4532A));
-  background: -webkit-gradient(linear, left top, right top, from(#A63B1E), to(#C4532A));
-  background: linear-gradient(to right, #A63B1E 0%, #C4532A 100%);
+  background: #A55A35;
+  background: -webkit-gradient(left top, right top, color-stop(0%, #A55A35), color-stop(100%, #C4704B));
+  background: -webkit-gradient(linear, left top, right top, from(#A55A35), to(#C4704B));
+  background: linear-gradient(to right, #A55A35 0%, #C4704B 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$firstcolor, endColorstr=$secondcolor, GradientType=1 );
   opacity: .8;
 }
@@ -519,8 +519,8 @@ a:hover, a:focus, a:active {
 }
 
 .btn.btn-primary {
-  border: 1px solid #C4532A;
-  background: #C4532A;
+  border: 1px solid #C4704B;
+  background: #C4704B;
   color: #ffffff;
 }
 
@@ -537,20 +537,20 @@ a:hover, a:focus, a:active {
 
 .btn.btn-ghost {
   background: transparent;
-  border: 1px solid #C4532A;
-  color: #C4532A;
+  border: 1px solid #C4704B;
+  color: #C4704B;
 }
 
 .btn.btn-ghost:hover {
-  background: #C4532A;
+  background: #C4704B;
   color: #ffffff;
 }
 
 .btn.btn-ghost:focus, .btn.btn-ghost:active {
   outline: none;
   background: transparent;
-  color: #C4532A;
-  border: 1px solid #C4532A;
+  color: #C4704B;
+  border: 1px solid #C4704B;
 }
 
 .btn.btn-ghost.btn-ghost-white {
@@ -561,13 +561,13 @@ a:hover, a:focus, a:active {
 
 .btn.btn-ghost.btn-ghost-white:hover {
   background: #ffffff;
-  color: #C4532A;
+  color: #C4704B;
 }
 
 .btn.btn-ghost.btn-ghost-white:focus, .btn.btn-ghost.btn-ghost-white:active {
   outline: none;
   background: #ffffff;
-  color: #C4532A;
+  color: #C4704B;
   border: 1px solid #ffffff;
 }
 
@@ -614,11 +614,11 @@ a:hover, a:focus, a:active {
 }
 
 .probootstrap-section.probootstrap-section-colored, .probootstrap-section.probootstrap-section-dark {
-  background: #C4532A;
-  background: #A63B1E;
-  background: -webkit-gradient(left top, right top, color-stop(0%, #A63B1E), color-stop(100%, #C4532A));
-  background: -webkit-gradient(linear, left top, right top, from(#A63B1E), to(#C4532A));
-  background: linear-gradient(to right, #A63B1E 0%, #C4532A 100%);
+  background: #C4704B;
+  background: #A55A35;
+  background: -webkit-gradient(left top, right top, color-stop(0%, #A55A35), color-stop(100%, #C4704B));
+  background: -webkit-gradient(linear, left top, right top, from(#A55A35), to(#C4704B));
+  background: linear-gradient(to right, #A55A35 0%, #C4704B 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$firstcolor, endColorstr=$secondcolor, GradientType=1 );
 }
 
@@ -631,11 +631,11 @@ a:hover, a:focus, a:active {
 }
 
 .probootstrap-section.probootstrap-section-colored .heading-with-icon, .probootstrap-section.probootstrap-section-dark .heading-with-icon {
-  color: #C4532A;
+  color: #C4704B;
 }
 
 .probootstrap-section.probootstrap-section-colored .heading-with-icon i, .probootstrap-section.probootstrap-section-dark .heading-with-icon i {
-  color: #C4532A;
+  color: #C4704B;
 }
 
 .probootstrap-section.probootstrap-section-colored p, .probootstrap-section.probootstrap-section-dark p {
@@ -685,7 +685,7 @@ a:hover, a:focus, a:active {
 }
 
 .probootstrap-product-tour h5 {
-  color: #C4532A;
+  color: #C4704B;
   margin-bottom: 0;
 }
 
@@ -952,7 +952,7 @@ a:hover, a:focus, a:active {
 }
 
 .probootstrap-block-image .text h3 a:hover {
-  color: #C4532A;
+  color: #C4704B;
 }
 
 .probootstrap-block-image .text p.dark {
@@ -1034,7 +1034,7 @@ a:hover, a:focus, a:active {
 }
 
 .link-with-icon {
-  color: #C4532A;
+  color: #C4704B;
 }
 
 .link-with-icon i {
@@ -1105,7 +1105,7 @@ a:hover, a:focus, a:active {
   display: block;
   text-transform: none;
   letter-spacing: normal;
-  color: #C4532A;
+  color: #C4704B;
   font-size: 14px;
   text-transform: uppercase;
 }
@@ -1116,7 +1116,7 @@ a:hover, a:focus, a:active {
 
 .probootstrap-pricing .probootstrap-price-wrap .probootstrap-price {
   font-size: 50px;
-  color: #C4532A;
+  color: #C4704B;
   font-weight: 100;
   line-height: 1.2;
   display: block;
@@ -1154,7 +1154,7 @@ a:hover, a:focus, a:active {
 }
 
 .heading-with-icon i {
-  color: #C4532A;
+  color: #C4704B;
   font-size: 30px;
   position: relative;
   margin-right: 20px;
@@ -1174,7 +1174,7 @@ a:hover, a:focus, a:active {
 
 .probootstrap-box .icon i {
   font-size: 50px;
-  color: #C4532A;
+  color: #C4704B;
 }
 
 .probootstrap-box ul {
@@ -1218,7 +1218,7 @@ a:hover, a:focus, a:active {
 
 .progress-bar {
   border: none;
-  background-color: #C4532A;
+  background-color: #C4704B;
   border-radius: 10px;
   position: relative;
   -webkit-box-shadow: none;
@@ -1227,7 +1227,7 @@ a:hover, a:focus, a:active {
 }
 
 .progress-bar > span {
-  background: #C4532A;
+  background: #C4704B;
   padding: 2px 4px;
   font-size: 10px;
   position: absolute;
@@ -1242,7 +1242,7 @@ a:hover, a:focus, a:active {
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 7px solid #C4532A;
+  border-top: 7px solid #C4704B;
   position: absolute;
   bottom: -7px;
   left: 50%;
@@ -1292,7 +1292,7 @@ a:hover, a:focus, a:active {
 .nav-tabs.probootstrap-tabs > li > a, .nav-pills.probootstrap-tabs > li > a {
   border-radius: 0px;
   padding: 20px 30px;
-  background: #C4532A;
+  background: #C4704B;
   color: #ffffff;
   font-size: 16px;
   border: none !important;
@@ -1356,7 +1356,7 @@ a:hover, a:focus, a:active {
 .service .icon i {
   font-size: 40px;
   color: rgba(0, 0, 0, 0.2);
-  color: #C4532A;
+  color: #C4704B;
 }
 
 .service h3 {
@@ -1465,7 +1465,7 @@ a:hover, a:focus, a:active {
 .probootstrap-form .form-control:active, .probootstrap-form .form-control:focus {
   -webkit-box-shadow: none;
   box-shadow: none;
-  border-color: #C4532A;
+  border-color: #C4704B;
   background: #ffffff;
 }
 
@@ -1510,7 +1510,7 @@ a:hover, a:focus, a:active {
 }
 
 .with-icon.colored i {
-  color: #C4532A;
+  color: #C4704B;
 }
 
 /* Flexslider override style */
@@ -2037,11 +2037,11 @@ a:hover, a:focus, a:active {
 }
 
 .probootstrap-primary-color {
-  color: #C4532A !important;
+  color: #C4704B !important;
 }
 
 .probootstrap-secondary-color {
-  color: #A63B1E !important;
+  color: #A55A35 !important;
 }
 
 @media screen and (max-width: 768px) {

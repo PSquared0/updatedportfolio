@@ -1,7 +1,7 @@
-/* 2026 palette: Terracotta #C4532A + Plum #4A1942
+/* 2026 palette: Terracotta #C4704B + Plum #4A1942
    Accent rotates on load via JS — fallback is terracotta */
 :root {
-  --accent: #C4532A;
+  --accent: #C4704B;
 }
 
 /* Hero height and overflow override */
