@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/accessibility.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/open-dyslexic@1.0.3/open-dyslexic-regular.min.css">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
     <!--[if lt IE 9]>
       <script src="js/vendor/html5shiv.min.js"></script>
@@ -19,11 +21,14 @@
     <![endif]-->
   </head>
 
+
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
 
   <header role="banner" class="probootstrap-header">
     <div class="container-fluid">
-      <a href="index.html" class="probootstrap-logo">Pascale Pierre</a>
+      <a href="index.html" class="probootstrap-logo" aria-label="Pascale Pierre — home">Pascale Pierre</a>
       <a href="#" class="probootstrap-burger-menu visible-xs"><i>Menu</i></a>
       <div class="mobile-menu-overlay"></div>
       <nav role="navigation" class="probootstrap-nav hidden-xs">
@@ -65,6 +70,8 @@
   </header>
 
 
+<main id="main-content">
+
 <section class="probootstrap-intro" style="background-image: url(img/hero_bg_2.jpg);" data-stellar-background-ratio="0.5">
   <div class="container-fluid">
     <div class="row">
@@ -85,10 +92,10 @@
 
       <h2>Project Overview</h2>
 
-      <h4>The Problem</h4>
+      <h2>The Problem</h2>
       <p>A portfolio built years ago for graphic design clients no longer reflected where I was headed. Every project was framed around deliverables — "here's the logo," "here's the campaign" — with no context for why it existed or what it solved. It also required editing the same nav, footer, and header across a dozen separate HTML files every time anything changed. The site was hard to maintain and harder to reposition.</p>
 
-      <h4>What I Did</h4>
+      <h2>What I Did</h2>
       <ul>
         <li>Rebuilt the entire site using a Gulp 4 partials system — nav, footer, and CTA are maintained in one file each, not duplicated across every page</li>
         <li>Rewrote all case study copy using a problem → process → outcome framework to speak to product and ops hiring managers, not just creative directors</li>
@@ -98,7 +105,7 @@
         <li>Wrote the About page experience section, career stats, and tools stack to make the ops and project management background legible to technical hiring managers</li>
       </ul>
 
-      <h4>Outcome</h4>
+      <h2>Outcome</h2>
       <p>A portfolio that reflects both design craft and technical depth — and changes its story slightly with every visit, because flexibility is the whole point. Every design decision has a reason. Every line of code is mine.</p>
 
       <p class="mb20">
@@ -127,25 +134,28 @@
       <div class="row text-center">
         <div class="col-lg-8 col-md-offset-2 mb30 section-heading probootstrap-animate">
           <h2>Let's Work Together</h2>
-          <p class="lead">I'm looking for teams that need someone who can communicate, enable, and execute — someone who understands products deeply and can help the people around them do the same. If that sounds like what you're building, I'd love to talk.</p>
+          <p class="lead">I'm looking for teams that need someone who can communicate, enable, and execute. Someone who understands products deeply and can help the people around them do the same. If that sounds like what you're building, I'd love to talk.</p>
         </div>
       </div>
       <div class="row">
         <div class="col-md-4 col-md-offset-4 probootstrap-animate">
           <p class="text-center">
-            <a href="contact.html" class="btn btn-ghost btn-ghost-white btn-lg btn-block" role="button">Contact Me</a>
+            <a href="contact.html" class="btn btn-ghost btn-ghost-white btn-lg btn-block" role="button" aria-label="Contact Pascale Pierre">Contact Me</a>
           </p>
         </div>
       </div>
     </div>
   </section>
 
+
+</main>
+
   <footer role="contentinfo" class="probootstrap-footer">
     <div class="container">
       <div class="row mt40">
         <div class="col-md-12 text-center">
           <p>
-            <small>&copy;2026 <a href="https://pascale-pierre.com/" target="_blank">Pascale Pierre</a>. All Rights Reserved. &nbsp;&middot;&nbsp; Designed &amp; built from scratch.<br>
+            <small>&copy;2026 <a href="https://pascale-pierre.com/" target="_blank">Pascale Pierre</a>. All Rights Reserved. &nbsp;&middot;&nbsp; Designed &amp; built from scratch. &nbsp;&middot;&nbsp; <a href="accessibility.html">Accessibility</a><br>
             <a href="#" class="js-backtotop">Back to top</a>
           </p>
         </div>
@@ -156,6 +166,13 @@
   <script src="js/scripts.min.js"></script>
   <script src="js/main.min.js"></script>
   <script src="js/custom.js"></script>
+
+  <div role="region" aria-label="Accessibility tools">
+    <button id="contrast-toggle" aria-label="Toggle high contrast mode" aria-pressed="false" title="Toggle high contrast mode">&#9681;</button>
+    <button id="text-size-toggle" aria-label="Increase text size" aria-pressed="false" title="Increase text size">A+</button>
+    <button id="dyslexia-toggle" aria-label="Toggle dyslexia-friendly font" aria-pressed="false" title="Dyslexia-friendly font">Aa</button>
+  </div>
+  <script src="js/accessibility-widgets.js"></script>
 
 
 </body>

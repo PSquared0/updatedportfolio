@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('partials/_head.html', {
+  "title": "Accessibility",
+  "description": "Accessibility statement for Pascale Pierre's portfolio site."
+})
+
+<body>
+@@include('partials/_skip-link.html')
+
+@@include('partials/_nav.html', {"page": "portfolio"})
+
+<main id="main-content">
+
+<section class="probootstrap-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 section-heading mb50 probootstrap-animate">
+        <h1 class="probootstrap-animate">Accessibility</h1>
+        <p class="lead">Accessibility isn't something I added to this site as an afterthought. It's how I think about every product I work on. This site is designed, built, and audited by me — and held to the same standard I bring to client work.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 probootstrap-animate">
+        <h2>What This Site Supports</h2>
+        <ul>
+          <li>Keyboard navigation throughout</li>
+          <li>Screen reader compatibility (tested with VoiceOver on macOS and iOS)</li>
+          <li>Skip to content link for keyboard users</li>
+          <li>ARIA landmarks, labels, and live regions</li>
+          <li>High contrast mode toggle</li>
+          <li>Text size toggle</li>
+          <li>Dyslexia-friendly font option</li>
+          <li>Reduced motion support (respects your system settings automatically)</li>
+          <li>WCAG 2.1 AA compliance, audited using axe-core 4.9.1 and WAVE by WebAIM</li>
+        </ul>
+
+        <h2>Known Limitations</h2>
+        <p>The rotating hero headline on the homepage is paused automatically for users with reduced motion enabled in their system settings. If you have any other issues navigating this site, please let me know.</p>
+
+        <h2>Get in Touch</h2>
+        <p>If something on this site isn't working for you — a screen reader issue, a contrast problem, anything — I want to know about it. <a href="contact.html" aria-label="Contact Pascale Pierre">Contact me directly.</a></p>
+
+        <p class="mb50"><small>This page was last reviewed June 2026.</small></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+@@include('partials/_cta.html')
+
+</main>
+
+@@include('partials/_footer.html')
+
+</body>
+</html>

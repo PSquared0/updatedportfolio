@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/accessibility.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/open-dyslexic@1.0.3/open-dyslexic-regular.min.css">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
     <!--[if lt IE 9]>
       <script src="js/vendor/html5shiv.min.js"></script>
@@ -19,11 +21,14 @@
     <![endif]-->
   </head>
 
+
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
 
   <header role="banner" class="probootstrap-header">
     <div class="container-fluid">
-      <a href="index.html" class="probootstrap-logo">Pascale Pierre</a>
+      <a href="index.html" class="probootstrap-logo" aria-label="Pascale Pierre — home">Pascale Pierre</a>
       <a href="#" class="probootstrap-burger-menu visible-xs"><i>Menu</i></a>
       <div class="mobile-menu-overlay"></div>
       <nav role="navigation" class="probootstrap-nav hidden-xs">
@@ -65,11 +70,13 @@
   </header>
 
 
+<main id="main-content">
+
 <section class="probootstrap-intro" style="background-image: url(img/hero_bg_2.jpg);" data-stellar-background-ratio="0.5">
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-7 probootstrap-intro-text">
-        <h1 class="probootstrap-animate" data-rotating-headline>I turn complex products into clear experiences.</h1>
+        <h1 class="probootstrap-animate" data-rotating-headline aria-live="polite" aria-atomic="true">I turn complex products into clear experiences.</h1>
         <div class="probootstrap-subtitle probootstrap-animate">
           <h2 data-rotating-subtitle>Product communicator, problem-solver, and the person who makes sure teams and customers actually understand each other.</h2>
         </div>
@@ -157,6 +164,19 @@
           </div>
         </a>
       </div>
+      <div class="col-md-12 portfolio-archive-divider">
+        <span>E-Commerce &amp; Operations</span>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <a href="portfolio-single-alaffia.html" class="probootstrap-hover-overlay">
+          <div class="alaffia-placeholder" role="img" aria-label="Alaffia project placeholder graphic" style="background:#C4704B; width:100%; aspect-ratio: 4 / 3;"></div>
+          <div class="probootstrap-text-overlay">
+            <h3>Alaffia</h3>
+            <p>E-Commerce &amp; Operations</p>
+          </div>
+        </a>
+      </div>
+
       <div class="col-md-12 portfolio-archive-divider">
         <span>Print &amp; Design</span>
       </div>
@@ -269,25 +289,28 @@
       <div class="row text-center">
         <div class="col-lg-8 col-md-offset-2 mb30 section-heading probootstrap-animate">
           <h2>Let's Work Together</h2>
-          <p class="lead">I'm looking for teams that need someone who can communicate, enable, and execute — someone who understands products deeply and can help the people around them do the same. If that sounds like what you're building, I'd love to talk.</p>
+          <p class="lead">I'm looking for teams that need someone who can communicate, enable, and execute. Someone who understands products deeply and can help the people around them do the same. If that sounds like what you're building, I'd love to talk.</p>
         </div>
       </div>
       <div class="row">
         <div class="col-md-4 col-md-offset-4 probootstrap-animate">
           <p class="text-center">
-            <a href="contact.html" class="btn btn-ghost btn-ghost-white btn-lg btn-block" role="button">Contact Me</a>
+            <a href="contact.html" class="btn btn-ghost btn-ghost-white btn-lg btn-block" role="button" aria-label="Contact Pascale Pierre">Contact Me</a>
           </p>
         </div>
       </div>
     </div>
   </section>
 
+
+</main>
+
   <footer role="contentinfo" class="probootstrap-footer">
     <div class="container">
       <div class="row mt40">
         <div class="col-md-12 text-center">
           <p>
-            <small>&copy;2026 <a href="https://pascale-pierre.com/" target="_blank">Pascale Pierre</a>. All Rights Reserved. &nbsp;&middot;&nbsp; Designed &amp; built from scratch.<br>
+            <small>&copy;2026 <a href="https://pascale-pierre.com/" target="_blank">Pascale Pierre</a>. All Rights Reserved. &nbsp;&middot;&nbsp; Designed &amp; built from scratch. &nbsp;&middot;&nbsp; <a href="accessibility.html">Accessibility</a><br>
             <a href="#" class="js-backtotop">Back to top</a>
           </p>
         </div>
@@ -298,6 +321,13 @@
   <script src="js/scripts.min.js"></script>
   <script src="js/main.min.js"></script>
   <script src="js/custom.js"></script>
+
+  <div role="region" aria-label="Accessibility tools">
+    <button id="contrast-toggle" aria-label="Toggle high contrast mode" aria-pressed="false" title="Toggle high contrast mode">&#9681;</button>
+    <button id="text-size-toggle" aria-label="Increase text size" aria-pressed="false" title="Increase text size">A+</button>
+    <button id="dyslexia-toggle" aria-label="Toggle dyslexia-friendly font" aria-pressed="false" title="Dyslexia-friendly font">Aa</button>
+  </div>
+  <script src="js/accessibility-widgets.js"></script>
 
 
 </body>

@@ -4,9 +4,13 @@
   "title": "About",
   "description": "Pascale Pierre — Product communicator and operations professional with a background in UX, web design, and graphic design."
 })
+
 <body>
+@@include('partials/_skip-link.html')
 
 @@include('partials/_nav.html', {"page": "about"})
+
+<main id="main-content">
 
 <section class="probootstrap-intro" style="background-image: url(img/hero_bg_2.jpg);" data-stellar-background-ratio="0.5">
   <div class="container-fluid">
@@ -79,7 +83,7 @@
       <div class="col-md-3">
         <h3 class="experience-company">KOMPAN</h3>
         <p class="experience-role">Lead Marketing Designer</p>
-        <p class="experience-meta">Austin, TX · 2024 – Present</p>
+        <p class="experience-meta">Austin, TX · 2024 – 2026</p>
       </div>
       <div class="col-md-9">
         <ul class="experience-bullets">
@@ -215,6 +219,9 @@
 </section>
 
 @@include('partials/_cta.html')
+
+</main>
+
 @@include('partials/_footer.html')
 
 </body>

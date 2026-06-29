@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('partials/_head.html', {
+  "title": "Scratch &amp; Map Case Study",
+  "description": "How Pascale Pierre revived a dead 2019 group project: diagnosing six years of dependency rot, modernizing the stack, and shipping it live with working Facebook login."
+})
+
+<body>
+@@include('partials/_skip-link.html')
+
+@@include('partials/_nav.html', {"page": "portfolio"})
+
+<main id="main-content">
+<section class="probootstrap-intro" style="background-image: url(img/hero_bg_2.jpg);" data-stellar-background-ratio="0.5">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-7 probootstrap-intro-text">
+        <h1 class="probootstrap-animate">Scratch &amp; Map</h1>
+        <div class="probootstrap-subtitle probootstrap-animate">
+          <h2>Reviving a Dead Project. Full-Stack Modernization &amp; Deployment</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="probootstrap-scroll-down js-next" href="#next-section">Scroll down <i class="icon-chevron-down"></i></a>
+</section>
+
+<section id="next-section" class="probootstrap-section">
+  <div class="container">
+    <div class="col-md-3 col-md-push-9">
+
+      <h2>Project Overview</h2>
+
+      <p>Scratch &amp; Map started as a 2019 Lambda School group project, a Flask + React app for tracking countries you've visited, lived in, or want to go. It had been sitting untouched for six years and was completely dead. The Python environment's code signature was corrupted, the local Postgres install was broken from an OS upgrade, and nearly every pinned dependency predated the Python and Node versions now required to run it.</p>
+
+      <p>I didn't just patch the old copy. I forked it into a new, independently deployed version: <strong>Scratch &amp; Map 2.0</strong>.</p>
+
+      <h2>What I Did</h2>
+      <ul>
+        <li><strong>Diagnosed the dependency chain.</strong> Walked through Flask, Werkzeug, SQLAlchemy, marshmallow, Stripe, and six, finding the specific version boundary where each one broke against current Python and Node, instead of guessing and reinstalling at random.</li>
+        <li><strong>Modernized the stack.</strong> Replaced the dead CRA2 and node-sass frontend with Vite, kept the existing React component logic intact to minimize risk, and migrated the unmaintained Stripe Elements package to Stripe's current SDK.</li>
+        <li><strong>Deployed it.</strong> Set up the Flask and Postgres backend on Render and the frontend on Netlify, wiring CORS, environment variables, and a production database from scratch.</li>
+        <li><strong>Fixed bugs.</strong> Tracked down a Facebook login race condition where the page reload fired before the login request resolved, plus a backend endpoint that crashed on null responses. Both were invisible until tested end-to-end in a live browser.</li>
+        <li><strong>Configured Facebook Login for production.</strong> Set app domains, privacy policy, and OAuth redirect URIs so the social login flow passes Facebook's review requirements instead of silently failing.</li>
+      </ul>
+
+      <h2>The Result</h2>
+      <p>A project that was completely unrunnable is now a live, working app with real authentication, a real database, and real deploys. Diagnosed and rebuilt layer by layer instead of thrown out and started over.</p>
+
+      <p class="mb20">
+        <strong class="probootstrap-black-color">Role:</strong><br>
+        Full-Stack Revival &middot; Deployment &amp; Debugging
+      </p>
+
+      <p class="mb50">
+        <strong class="probootstrap-black-color">Stack:</strong><br>
+        Flask &middot; React (Vite) &middot; PostgreSQL &middot; Render &middot; Netlify
+      </p>
+
+      <p>
+        <a href="https://scratchmap2.netlify.app" target="_blank" role="button" class="btn btn-primary">View Live Site</a>
+      </p>
+      <p>
+        <a href="https://github.com/PSquared0/scratch-and-map-2.0" target="_blank" role="button" class="btn btn-ghost">View on GitHub</a>
+      </p>
+
+    </div>
+    <div class="col-md-9 col-md-pull-3">
+      <p><img src="img/scratchandmap_hero.jpg" alt="Scratch and Map landing page" class="img-responsive"></p>
+      <p><img src="img/scratchandmap_map.jpg" alt="Scratch and Map interactive country tracking map" class="img-responsive"></p>
+    </div>
+  </div>
+</section>
+
+@@include('partials/_cta.html')
+</main>
+
+@@include('partials/_footer.html')
+
+</body>
+</html>

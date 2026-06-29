@@ -4,9 +4,13 @@
   "title": "This Site — Case Study",
   "description": "How Pascale Pierre redesigned and rebuilt her own portfolio from scratch to reposition from graphic design toward product, ops, and technical communication roles."
 })
+
 <body>
+@@include('partials/_skip-link.html')
 
 @@include('partials/_nav.html', {"page": "portfolio"})
+
+<main id="main-content">
 
 <section class="probootstrap-intro" style="background-image: url(img/hero_bg_2.jpg);" data-stellar-background-ratio="0.5">
   <div class="container-fluid">
@@ -28,10 +32,10 @@
 
       <h2>Project Overview</h2>
 
-      <h4>The Problem</h4>
+      <h2>The Problem</h2>
       <p>A portfolio built years ago for graphic design clients no longer reflected where I was headed. Every project was framed around deliverables — "here's the logo," "here's the campaign" — with no context for why it existed or what it solved. It also required editing the same nav, footer, and header across a dozen separate HTML files every time anything changed. The site was hard to maintain and harder to reposition.</p>
 
-      <h4>What I Did</h4>
+      <h2>What I Did</h2>
       <ul>
         <li>Rebuilt the entire site using a Gulp 4 partials system — nav, footer, and CTA are maintained in one file each, not duplicated across every page</li>
         <li>Rewrote all case study copy using a problem → process → outcome framework to speak to product and ops hiring managers, not just creative directors</li>
@@ -41,7 +45,7 @@
         <li>Wrote the About page experience section, career stats, and tools stack to make the ops and project management background legible to technical hiring managers</li>
       </ul>
 
-      <h4>Outcome</h4>
+      <h2>Outcome</h2>
       <p>A portfolio that reflects both design craft and technical depth — and changes its story slightly with every visit, because flexibility is the whole point. Every design decision has a reason. Every line of code is mine.</p>
 
       <p class="mb20">
@@ -66,6 +70,9 @@
 </section>
 
 @@include('partials/_cta.html')
+
+</main>
+
 @@include('partials/_footer.html')
 
 </body>

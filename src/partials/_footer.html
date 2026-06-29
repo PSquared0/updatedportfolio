@@ -3,7 +3,7 @@
       <div class="row mt40">
         <div class="col-md-12 text-center">
           <p>
-            <small>&copy;2026 <a href="https://pascale-pierre.com/" target="_blank">Pascale Pierre</a>. All Rights Reserved. &nbsp;&middot;&nbsp; Designed &amp; built from scratch.<br>
+            <small>&copy;2026 <a href="https://pascale-pierre.com/" target="_blank">Pascale Pierre</a>. All Rights Reserved. &nbsp;&middot;&nbsp; Designed &amp; built from scratch. &nbsp;&middot;&nbsp; <a href="accessibility.html">Accessibility</a><br>
             <a href="#" class="js-backtotop">Back to top</a>
           </p>
         </div>
@@ -14,3 +14,10 @@
   <script src="js/scripts.min.js"></script>
   <script src="js/main.min.js"></script>
   <script src="js/custom.js"></script>
+
+  <div role="region" aria-label="Accessibility tools">
+    <button id="contrast-toggle" aria-label="Toggle high contrast mode" aria-pressed="false" title="Toggle high contrast mode">&#9681;</button>
+    <button id="text-size-toggle" aria-label="Increase text size" aria-pressed="false" title="Increase text size">A+</button>
+    <button id="dyslexia-toggle" aria-label="Toggle dyslexia-friendly font" aria-pressed="false" title="Dyslexia-friendly font">Aa</button>
+  </div>
+  <script src="js/accessibility-widgets.js"></script>

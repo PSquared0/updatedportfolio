@@ -1,0 +1,128 @@
+/* Accessibility: skip link, focus styles, reduced motion, contrast/text-size/dyslexia toggles */
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  background: #C4704B;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 0 0 4px 4px;
+  text-decoration: none;
+  z-index: 9999;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Branded focus styles */
+*:focus {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2.5px solid #C4704B;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Accessibility toggle buttons */
+#contrast-toggle,
+#text-size-toggle,
+#dyslexia-toggle {
+  position: fixed;
+  bottom: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #C4704B;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+}
+
+#contrast-toggle:hover,
+#text-size-toggle:hover,
+#dyslexia-toggle:hover {
+  transform: scale(1.1);
+}
+
+#contrast-toggle {
+  right: 1.5rem;
+  font-size: 1.1rem;
+}
+
+#text-size-toggle {
+  right: 4.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: 'Rubik', sans-serif;
+}
+
+#dyslexia-toggle {
+  right: 7.5rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  font-family: 'Rubik', sans-serif;
+}
+
+/* High contrast overrides */
+body.high-contrast {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+
+body.high-contrast a {
+  color: #ffff00 !important;
+}
+
+body.high-contrast h1,
+body.high-contrast h2,
+body.high-contrast h3,
+body.high-contrast h4 {
+  color: #ffffff !important;
+}
+
+body.high-contrast .probootstrap-intro,
+body.high-contrast .probootstrap-header,
+body.high-contrast header {
+  background: #000000 !important;
+}
+
+/* Large text */
+body.large-text {
+  font-size: 120% !important;
+}
+
+/* Dyslexia-friendly font */
+body.dyslexic-font p,
+body.dyslexic-font li,
+body.dyslexic-font span,
+body.dyslexic-font a {
+  font-family: 'OpenDyslexic', sans-serif !important;
+  letter-spacing: 0.05em;
+  line-height: 1.8;
+}

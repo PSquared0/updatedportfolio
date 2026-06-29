@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ReRoute — Case Study — Pascale Pierre</title>
     <meta name="description" content="How Pascale Pierre revived a 2017 college project — porting it from Python 2 to a modern stack, replacing a retired transit API, and redesigning it from scratch.">
-    <meta name="keywords" content="Pascale Pierre, product advocate, operations, technical communication, UX, web design, full stack, deployment, debugging, process design, cross-functional">
+    <meta name="keywords" content="Pascale Pierre, product advocate, operations, technical communication, UX, web design, graphic design, designer, product evangelist, process design, cross-functional">
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles-merged.css">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/accessibility.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/open-dyslexic@1.0.3/open-dyslexic-regular.min.css">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
     <!--[if lt IE 9]>
       <script src="js/vendor/html5shiv.min.js"></script>
@@ -19,18 +21,30 @@
     <![endif]-->
   </head>
 
+
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
 
   <header role="banner" class="probootstrap-header">
     <div class="container-fluid">
-      <a href="index.html" class="probootstrap-logo">Pascale Pierre</a>
+      <a href="index.html" class="probootstrap-logo" aria-label="Pascale Pierre — home">Pascale Pierre</a>
       <a href="#" class="probootstrap-burger-menu visible-xs"><i>Menu</i></a>
       <div class="mobile-menu-overlay"></div>
       <nav role="navigation" class="probootstrap-nav hidden-xs">
         <ul class="probootstrap-main-nav">
+          
+          
           <li><a href="index.html">Home</a></li>
+          
+          
+          
           <li><a href="about.html">About</a></li>
+          
+          
+          
           <li><a href="contact.html">Contact</a></li>
+          
           <li>
             <a href="https://www.linkedin.com/in/pascale-pierre/" target="_blank" class="nav-linkedin">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="vertical-align:middle; margin-right:4px;">
@@ -43,7 +57,7 @@
           <a href="#" class="probootstrap-burger-menu"><i>Menu</i></a>
           <ul class="social-buttons">
             <li><a href="https://www.linkedin.com/in/pascale-pierre/" target="_blank"><i class="icon-linkedin"></i></a></li>
-            <li><a href="mailto:pascalelpierre@gmail.com" target="_blank">
+            <li><a href="mailto:hello@pascale-pierre.com" target="_blank">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-open-fill" viewBox="0 0 16 16">
                 <path d="M8.941.435a2 2 0 0 0-1.882 0l-6 3.2A2 2 0 0 0 0 5.4v.314l6.709 3.932L8 8.928l1.291.718L16 5.714V5.4a2 2 0 0 0-1.059-1.765l-6-3.2ZM16 6.873l-5.693 3.337L16 13.372v-6.5Zm-.059 7.611L8 10.072.059 14.484A2 2 0 0 0 2 16h12a2 2 0 0 0 1.941-1.516ZM0 13.373l5.693-3.163L0 6.873v6.5Z"/>
               </svg>
@@ -56,6 +70,7 @@
   </header>
 
 
+<main id="main-content">
 <section class="probootstrap-intro" style="background-image: url(img/hero_bg_1.jpg);" data-stellar-background-ratio="0.5">
   <div class="container-fluid">
     <div class="row">
@@ -78,7 +93,7 @@
 
       <p>ReRoute is a peer-rating app for San Francisco Muni buses, originally built back in 2017 during a coding bootcamp. It had been sitting untouched ever since: Python 2 syntax throughout, Flask 0.12, a Postgres dump file going back nine years, and a live integration with NextBus's public transit API &mdash; which Muni quietly migrated off of years ago, so every "nearby bus" request just failed silently.</p>
 
-      <h4>What I Did</h4>
+      <h2>What I Did</h2>
       <ul>
         <li><strong>Finished the Python 3 port.</strong> Found a half-done migration already in progress from an earlier session, fixed the broken edits left behind (a commented-out template loop, mangled markup), and closed out the remaining Python 2 syntax and SQLAlchemy 2.0 compatibility issues &mdash; including a subtle bug where SQLAlchemy 2.0's stricter Row-object handling silently broke a working query.</li>
         <li><strong>Replaced a dead third-party API.</strong> Diagnosed that NextBus's feed no longer serves SF Muni at all, then rebuilt the live-arrivals integration against 511.org's official transit API (where Muni actually moved), including tracking down a UTF-8 BOM in the response that was silently breaking JSON parsing.</li>
@@ -87,7 +102,7 @@
         <li><strong>Redesigned it from scratch.</strong> Replaced the original Bootstrap 3 theme with a custom pastel, rounded design system, and cut dead leftover code that had nothing to do with the app (a hardcoded weather widget for Austin, TX, and an exposed Google Maps API key sitting in the public repo).</li>
       </ul>
 
-      <h4>The Result</h4>
+      <h2>The Result</h2>
       <p>A nine-year-old, never-deployed bootcamp project is now a live, working app on a modern stack &mdash; real-time bus data, hashed passwords, a working rating system, and a look that actually reflects the redesign instead of the default Bootstrap theme it shipped with.</p>
 
       <p class="mb20">
@@ -120,25 +135,27 @@
       <div class="row text-center">
         <div class="col-lg-8 col-md-offset-2 mb30 section-heading probootstrap-animate">
           <h2>Let's Work Together</h2>
-          <p class="lead">I'm looking for teams that need someone who can communicate, enable, and execute — someone who understands products deeply and can help the people around them do the same. If that sounds like what you're building, I'd love to talk.</p>
+          <p class="lead">I'm looking for teams that need someone who can communicate, enable, and execute. Someone who understands products deeply and can help the people around them do the same. If that sounds like what you're building, I'd love to talk.</p>
         </div>
       </div>
       <div class="row">
         <div class="col-md-4 col-md-offset-4 probootstrap-animate">
           <p class="text-center">
-            <a href="contact.html" class="btn btn-ghost btn-ghost-white btn-lg btn-block" role="button">Contact Me</a>
+            <a href="contact.html" class="btn btn-ghost btn-ghost-white btn-lg btn-block" role="button" aria-label="Contact Pascale Pierre">Contact Me</a>
           </p>
         </div>
       </div>
     </div>
   </section>
 
+</main>
+
   <footer role="contentinfo" class="probootstrap-footer">
     <div class="container">
       <div class="row mt40">
         <div class="col-md-12 text-center">
           <p>
-            <small>&copy;2026 <a href="https://pascale-pierre.com/" target="_blank">Pascale Pierre</a>. All Rights Reserved. &nbsp;&middot;&nbsp; Designed &amp; built from scratch.<br>
+            <small>&copy;2026 <a href="https://pascale-pierre.com/" target="_blank">Pascale Pierre</a>. All Rights Reserved. &nbsp;&middot;&nbsp; Designed &amp; built from scratch. &nbsp;&middot;&nbsp; <a href="accessibility.html">Accessibility</a><br>
             <a href="#" class="js-backtotop">Back to top</a>
           </p>
         </div>
@@ -149,6 +166,13 @@
   <script src="js/scripts.min.js"></script>
   <script src="js/main.min.js"></script>
   <script src="js/custom.js"></script>
+
+  <div role="region" aria-label="Accessibility tools">
+    <button id="contrast-toggle" aria-label="Toggle high contrast mode" aria-pressed="false" title="Toggle high contrast mode">&#9681;</button>
+    <button id="text-size-toggle" aria-label="Increase text size" aria-pressed="false" title="Increase text size">A+</button>
+    <button id="dyslexia-toggle" aria-label="Toggle dyslexia-friendly font" aria-pressed="false" title="Dyslexia-friendly font">Aa</button>
+  </div>
+  <script src="js/accessibility-widgets.js"></script>
 
 
 </body>

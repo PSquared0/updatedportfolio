@@ -24,7 +24,7 @@ body {
   font-weight: 300;
   font-family: 'Rubik', serif;
   line-height: 1.8;
-  color: #7e8890;
+  color: #6B7480;
 }
 
 ::-moz-selection {
@@ -976,7 +976,7 @@ a:hover, a:focus, a:active {
 
 .probootstrap-blog-list li a, .probootstrap-product-list li a {
   display: block;
-  color: #7e8890;
+  color: #6B7480;
 }
 
 .probootstrap-blog-list li a figure, .probootstrap-blog-list li a .text, .probootstrap-product-list li a figure, .probootstrap-product-list li a .text {

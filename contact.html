@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/accessibility.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/open-dyslexic@1.0.3/open-dyslexic-regular.min.css">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
     <!--[if lt IE 9]>
       <script src="js/vendor/html5shiv.min.js"></script>
@@ -19,11 +21,14 @@
     <![endif]-->
   </head>
 
+
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
 
   <header role="banner" class="probootstrap-header">
     <div class="container-fluid">
-      <a href="index.html" class="probootstrap-logo">Pascale Pierre</a>
+      <a href="index.html" class="probootstrap-logo" aria-label="Pascale Pierre — home">Pascale Pierre</a>
       <a href="#" class="probootstrap-burger-menu visible-xs"><i>Menu</i></a>
       <div class="mobile-menu-overlay"></div>
       <nav role="navigation" class="probootstrap-nav hidden-xs">
@@ -64,6 +69,8 @@
     </div>
   </header>
 
+
+<main id="main-content">
 
 <section class="probootstrap-intro" style="background-image: url(img/hero_bg_2.jpg);" data-stellar-background-ratio="0.5">
   <div class="container-fluid">
@@ -110,12 +117,14 @@
   </div>
 </section>
 
+</main>
+
   <footer role="contentinfo" class="probootstrap-footer">
     <div class="container">
       <div class="row mt40">
         <div class="col-md-12 text-center">
           <p>
-            <small>&copy;2026 <a href="https://pascale-pierre.com/" target="_blank">Pascale Pierre</a>. All Rights Reserved. &nbsp;&middot;&nbsp; Designed &amp; built from scratch.<br>
+            <small>&copy;2026 <a href="https://pascale-pierre.com/" target="_blank">Pascale Pierre</a>. All Rights Reserved. &nbsp;&middot;&nbsp; Designed &amp; built from scratch. &nbsp;&middot;&nbsp; <a href="accessibility.html">Accessibility</a><br>
             <a href="#" class="js-backtotop">Back to top</a>
           </p>
         </div>
@@ -126,6 +135,13 @@
   <script src="js/scripts.min.js"></script>
   <script src="js/main.min.js"></script>
   <script src="js/custom.js"></script>
+
+  <div role="region" aria-label="Accessibility tools">
+    <button id="contrast-toggle" aria-label="Toggle high contrast mode" aria-pressed="false" title="Toggle high contrast mode">&#9681;</button>
+    <button id="text-size-toggle" aria-label="Increase text size" aria-pressed="false" title="Increase text size">A+</button>
+    <button id="dyslexia-toggle" aria-label="Toggle dyslexia-friendly font" aria-pressed="false" title="Dyslexia-friendly font">Aa</button>
+  </div>
+  <script src="js/accessibility-widgets.js"></script>
 
 
 </body>

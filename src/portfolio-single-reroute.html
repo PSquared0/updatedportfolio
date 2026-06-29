@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('partials/_head.html', {
+  "title": "ReRoute — Case Study",
+  "description": "How Pascale Pierre revived a 2017 college project — porting it from Python 2 to a modern stack, replacing a retired transit API, and redesigning it from scratch."
+})
+
+<body>
+@@include('partials/_skip-link.html')
+
+@@include('partials/_nav.html', {"page": "portfolio"})
+
+<main id="main-content">
+<section class="probootstrap-intro" style="background-image: url(img/hero_bg_1.jpg);" data-stellar-background-ratio="0.5">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-7 probootstrap-intro-text">
+        <h1 class="probootstrap-animate">ReRoute</h1>
+        <div class="probootstrap-subtitle probootstrap-animate">
+          <h2>Reviving a College Project &middot; Python 2&rarr;3 Port, API Replacement &amp; Redesign</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="probootstrap-scroll-down js-next" href="#next-section">Scroll down <i class="icon-chevron-down"></i></a>
+</section>
+
+<section id="next-section" class="probootstrap-section">
+  <div class="container">
+    <div class="col-md-3 col-md-push-9">
+
+      <h2>Project Overview</h2>
+
+      <p>ReRoute is a peer-rating app for San Francisco Muni buses, originally built back in 2017 during a coding bootcamp. It had been sitting untouched ever since: Python 2 syntax throughout, Flask 0.12, a Postgres dump file going back nine years, and a live integration with NextBus's public transit API &mdash; which Muni quietly migrated off of years ago, so every "nearby bus" request just failed silently.</p>
+
+      <h2>What I Did</h2>
+      <ul>
+        <li><strong>Finished the Python 3 port.</strong> Found a half-done migration already in progress from an earlier session, fixed the broken edits left behind (a commented-out template loop, mangled markup), and closed out the remaining Python 2 syntax and SQLAlchemy 2.0 compatibility issues &mdash; including a subtle bug where SQLAlchemy 2.0's stricter Row-object handling silently broke a working query.</li>
+        <li><strong>Replaced a dead third-party API.</strong> Diagnosed that NextBus's feed no longer serves SF Muni at all, then rebuilt the live-arrivals integration against 511.org's official transit API (where Muni actually moved), including tracking down a UTF-8 BOM in the response that was silently breaking JSON parsing.</li>
+        <li><strong>Fixed real logic bugs, not just syntax.</strong> Passwords were stored and compared in plaintext; rating submissions always inserted a new row instead of updating an existing one; logging out crashed if you weren't logged in. Fixed all three, plus added password hashing.</li>
+        <li><strong>Deployed it for the first time, ever.</strong> This project had never been live. Stood up a production Postgres database, configured gunicorn, and shipped it on Render &mdash; including working around the platform's one-free-database-per-account limit by moving the database to Neon instead.</li>
+        <li><strong>Redesigned it from scratch.</strong> Replaced the original Bootstrap 3 theme with a custom pastel, rounded design system, and cut dead leftover code that had nothing to do with the app (a hardcoded weather widget for Austin, TX, and an exposed Google Maps API key sitting in the public repo).</li>
+      </ul>
+
+      <h2>The Result</h2>
+      <p>A nine-year-old, never-deployed bootcamp project is now a live, working app on a modern stack &mdash; real-time bus data, hashed passwords, a working rating system, and a look that actually reflects the redesign instead of the default Bootstrap theme it shipped with.</p>
+
+      <p class="mb20">
+        <strong class="probootstrap-black-color">Role:</strong><br>
+        Full-Stack Revival &middot; API Migration &amp; Visual Redesign
+      </p>
+
+      <p class="mb50">
+        <strong class="probootstrap-black-color">Stack:</strong><br>
+        Flask &middot; SQLAlchemy &middot; PostgreSQL (Neon) &middot; Render &middot; 511.org Transit API
+      </p>
+
+      <p>
+        <a href="https://reroute-hb-project.onrender.com" target="_blank" role="button" class="btn btn-primary">View Live Site</a>
+      </p>
+      <p>
+        <a href="https://github.com/PSquared0/reroute_hb_project" target="_blank" role="button" class="btn btn-ghost">View on GitHub</a>
+      </p>
+
+    </div>
+    <div class="col-md-9 col-md-pull-3">
+      <p><img src="img/reroute_hero.jpg" alt="ReRoute homepage" class="img-responsive"></p>
+      <p><img src="img/reroute_detail.jpg" alt="ReRoute bus detail page with rating chart" class="img-responsive"></p>
+    </div>
+  </div>
+</section>
+
+@@include('partials/_cta.html')
+</main>
+
+@@include('partials/_footer.html')
+
+</body>
+</html>

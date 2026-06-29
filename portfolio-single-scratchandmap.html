@@ -3,15 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Scratch &amp; Map — Case Study — Pascale Pierre</title>
-    <meta name="description" content="How Pascale Pierre revived a dead 2019 group project — diagnosing six years of dependency rot, modernizing the stack, and shipping it live with working Facebook login.">
-    <meta name="keywords" content="Pascale Pierre, product advocate, operations, technical communication, UX, web design, full stack, deployment, debugging, process design, cross-functional">
+    <title>Scratch &amp; Map Case Study — Pascale Pierre</title>
+    <meta name="description" content="How Pascale Pierre revived a dead 2019 group project: diagnosing six years of dependency rot, modernizing the stack, and shipping it live with working Facebook login.">
+    <meta name="keywords" content="Pascale Pierre, product advocate, operations, technical communication, UX, web design, graphic design, designer, product evangelist, process design, cross-functional">
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles-merged.css">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/accessibility.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/open-dyslexic@1.0.3/open-dyslexic-regular.min.css">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
     <!--[if lt IE 9]>
       <script src="js/vendor/html5shiv.min.js"></script>
@@ -19,18 +21,30 @@
     <![endif]-->
   </head>
 
+
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
 
   <header role="banner" class="probootstrap-header">
     <div class="container-fluid">
-      <a href="index.html" class="probootstrap-logo">Pascale Pierre</a>
+      <a href="index.html" class="probootstrap-logo" aria-label="Pascale Pierre — home">Pascale Pierre</a>
       <a href="#" class="probootstrap-burger-menu visible-xs"><i>Menu</i></a>
       <div class="mobile-menu-overlay"></div>
       <nav role="navigation" class="probootstrap-nav hidden-xs">
         <ul class="probootstrap-main-nav">
+          
+          
           <li><a href="index.html">Home</a></li>
+          
+          
+          
           <li><a href="about.html">About</a></li>
+          
+          
+          
           <li><a href="contact.html">Contact</a></li>
+          
           <li>
             <a href="https://www.linkedin.com/in/pascale-pierre/" target="_blank" class="nav-linkedin">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="vertical-align:middle; margin-right:4px;">
@@ -43,7 +57,7 @@
           <a href="#" class="probootstrap-burger-menu"><i>Menu</i></a>
           <ul class="social-buttons">
             <li><a href="https://www.linkedin.com/in/pascale-pierre/" target="_blank"><i class="icon-linkedin"></i></a></li>
-            <li><a href="mailto:pascalelpierre@gmail.com" target="_blank">
+            <li><a href="mailto:hello@pascale-pierre.com" target="_blank">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-open-fill" viewBox="0 0 16 16">
                 <path d="M8.941.435a2 2 0 0 0-1.882 0l-6 3.2A2 2 0 0 0 0 5.4v.314l6.709 3.932L8 8.928l1.291.718L16 5.714V5.4a2 2 0 0 0-1.059-1.765l-6-3.2ZM16 6.873l-5.693 3.337L16 13.372v-6.5Zm-.059 7.611L8 10.072.059 14.484A2 2 0 0 0 2 16h12a2 2 0 0 0 1.941-1.516ZM0 13.373l5.693-3.163L0 6.873v6.5Z"/>
               </svg>
@@ -56,13 +70,14 @@
   </header>
 
 
+<main id="main-content">
 <section class="probootstrap-intro" style="background-image: url(img/hero_bg_2.jpg);" data-stellar-background-ratio="0.5">
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-7 probootstrap-intro-text">
         <h1 class="probootstrap-animate">Scratch &amp; Map</h1>
         <div class="probootstrap-subtitle probootstrap-animate">
-          <h2>Reviving a Dead Project &middot; Full-Stack Modernization &amp; Deployment</h2>
+          <h2>Reviving a Dead Project. Full-Stack Modernization &amp; Deployment</h2>
         </div>
       </div>
     </div>
@@ -76,21 +91,21 @@
 
       <h2>Project Overview</h2>
 
-      <p>Scratch &amp; Map started as a 2019 Lambda School group project — a Flask + React app for tracking countries you've visited, lived in, or want to go. It had been sitting untouched for six years and was completely dead: the Python environment's code signature was corrupted, the local Postgres install was broken from an OS upgrade, and nearly every pinned dependency predated the Python and Node versions now required to run it.</p>
+      <p>Scratch &amp; Map started as a 2019 Lambda School group project, a Flask + React app for tracking countries you've visited, lived in, or want to go. It had been sitting untouched for six years and was completely dead. The Python environment's code signature was corrupted, the local Postgres install was broken from an OS upgrade, and nearly every pinned dependency predated the Python and Node versions now required to run it.</p>
 
-      <p>I didn't just patch the old copy — I forked it into a new, independently deployed version: <strong>Scratch &amp; Map 2.0</strong>.</p>
+      <p>I didn't just patch the old copy. I forked it into a new, independently deployed version: <strong>Scratch &amp; Map 2.0</strong>.</p>
 
-      <h4>What I Did</h4>
+      <h2>What I Did</h2>
       <ul>
-        <li><strong>Diagnosed the rot.</strong> Walked the entire dependency chain — Flask, Werkzeug, SQLAlchemy, marshmallow, Stripe, six — finding the specific version boundary where each one broke against current Python/Node, instead of guessing and reinstalling at random.</li>
-        <li><strong>Modernized the stack.</strong> Replaced the dead CRA2 + node-sass frontend with Vite, kept the existing React component logic intact to minimize risk, and migrated the unmaintained Stripe Elements package to Stripe's current SDK.</li>
-        <li><strong>Shipped it live.</strong> Deployed the Flask + Postgres backend on Render and the frontend on Netlify, wiring CORS, environment variables, and a production database from scratch.</li>
-        <li><strong>Fixed real bugs, not just config.</strong> Tracked down a Facebook login race condition where the page reload fired before the login request resolved, plus a backend endpoint that crashed on `null` responses — both invisible until tested end-to-end in a live browser.</li>
-        <li><strong>Got Facebook Login production-ready.</strong> Configured app domains, privacy policy, and OAuth redirect URIs so the social login flow actually passes Facebook's review requirements instead of silently failing.</li>
+        <li><strong>Diagnosed the dependency chain.</strong> Walked through Flask, Werkzeug, SQLAlchemy, marshmallow, Stripe, and six, finding the specific version boundary where each one broke against current Python and Node, instead of guessing and reinstalling at random.</li>
+        <li><strong>Modernized the stack.</strong> Replaced the dead CRA2 and node-sass frontend with Vite, kept the existing React component logic intact to minimize risk, and migrated the unmaintained Stripe Elements package to Stripe's current SDK.</li>
+        <li><strong>Deployed it.</strong> Set up the Flask and Postgres backend on Render and the frontend on Netlify, wiring CORS, environment variables, and a production database from scratch.</li>
+        <li><strong>Fixed bugs.</strong> Tracked down a Facebook login race condition where the page reload fired before the login request resolved, plus a backend endpoint that crashed on null responses. Both were invisible until tested end-to-end in a live browser.</li>
+        <li><strong>Configured Facebook Login for production.</strong> Set app domains, privacy policy, and OAuth redirect URIs so the social login flow passes Facebook's review requirements instead of silently failing.</li>
       </ul>
 
-      <h4>The Result</h4>
-      <p>A project that was completely unrunnable is now a live, working app with real authentication, a real database, and real deploys — diagnosed and rebuilt layer by layer instead of thrown out and started over.</p>
+      <h2>The Result</h2>
+      <p>A project that was completely unrunnable is now a live, working app with real authentication, a real database, and real deploys. Diagnosed and rebuilt layer by layer instead of thrown out and started over.</p>
 
       <p class="mb20">
         <strong class="probootstrap-black-color">Role:</strong><br>
@@ -122,25 +137,27 @@
       <div class="row text-center">
         <div class="col-lg-8 col-md-offset-2 mb30 section-heading probootstrap-animate">
           <h2>Let's Work Together</h2>
-          <p class="lead">I'm looking for teams that need someone who can communicate, enable, and execute — someone who understands products deeply and can help the people around them do the same. If that sounds like what you're building, I'd love to talk.</p>
+          <p class="lead">I'm looking for teams that need someone who can communicate, enable, and execute. Someone who understands products deeply and can help the people around them do the same. If that sounds like what you're building, I'd love to talk.</p>
         </div>
       </div>
       <div class="row">
         <div class="col-md-4 col-md-offset-4 probootstrap-animate">
           <p class="text-center">
-            <a href="contact.html" class="btn btn-ghost btn-ghost-white btn-lg btn-block" role="button">Contact Me</a>
+            <a href="contact.html" class="btn btn-ghost btn-ghost-white btn-lg btn-block" role="button" aria-label="Contact Pascale Pierre">Contact Me</a>
           </p>
         </div>
       </div>
     </div>
   </section>
 
+</main>
+
   <footer role="contentinfo" class="probootstrap-footer">
     <div class="container">
       <div class="row mt40">
         <div class="col-md-12 text-center">
           <p>
-            <small>&copy;2026 <a href="https://pascale-pierre.com/" target="_blank">Pascale Pierre</a>. All Rights Reserved. &nbsp;&middot;&nbsp; Designed &amp; built from scratch.<br>
+            <small>&copy;2026 <a href="https://pascale-pierre.com/" target="_blank">Pascale Pierre</a>. All Rights Reserved. &nbsp;&middot;&nbsp; Designed &amp; built from scratch. &nbsp;&middot;&nbsp; <a href="accessibility.html">Accessibility</a><br>
             <a href="#" class="js-backtotop">Back to top</a>
           </p>
         </div>
@@ -151,6 +168,13 @@
   <script src="js/scripts.min.js"></script>
   <script src="js/main.min.js"></script>
   <script src="js/custom.js"></script>
+
+  <div role="region" aria-label="Accessibility tools">
+    <button id="contrast-toggle" aria-label="Toggle high contrast mode" aria-pressed="false" title="Toggle high contrast mode">&#9681;</button>
+    <button id="text-size-toggle" aria-label="Increase text size" aria-pressed="false" title="Increase text size">A+</button>
+    <button id="dyslexia-toggle" aria-label="Toggle dyslexia-friendly font" aria-pressed="false" title="Dyslexia-friendly font">Aa</button>
+  </div>
+  <script src="js/accessibility-widgets.js"></script>
 
 
 </body>
