@@ -2,7 +2,7 @@
 (function() {
   var palettes = [
     {
-      accent:   '#C4532A',
+      accent:   '#C4704B',
       name:     'terracotta',
       headline: 'I turn complex products into clear experiences.',
       subtitle: 'Product communicator, problem-solver, and the person who makes sure teams and customers actually understand each other.'
